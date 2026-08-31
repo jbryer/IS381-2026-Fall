@@ -2,7 +2,7 @@
 title: "Introduction to IS 381"
 subtitle: "Statistics and Probability with R"
 author: Jason Bryer, Ph.D.
-date: "Spring 2026"
+date: "Fall 2026"
 output:
   xaringan::moon_reader:
     css: ["assets/mtheme_max.css", "assets/fonts_mtheme_max.css"]
@@ -74,11 +74,20 @@ class: center, middle, inverse, title-slide
 
 ---
 
-# Also a Father...
+# Built a van...
 
-```{r, out.width='65%', fig.align='center', echo=FALSE}
-knitr::include_graphics('images/BoysFall2019.jpg')
+.pull-left[
+```{r, out.width='100%', fig.align='center', echo=FALSE}
+knitr::include_graphics('images/BryerVan1.jpeg')
 ```
+
+]
+.pull-right[
+```{r, out.width='100%', fig.align='center', echo=FALSE}
+knitr::include_graphics('images/BryerVan2.jpeg')
+```
+
+]
 
 ---
 
@@ -256,7 +265,7 @@ The goal of this course is for *you to develop the foundation knowledge and skil
 ---
 # Next steps... `r hexes(c('DAACS'))`
 
-Before January 30th:
+ASAP:
 
 * Complete this Google form: `r formative_assessment`
 * Go to https://cuny.daacs.net and complete the self-regulated learning assessment
@@ -264,7 +273,7 @@ Before January 30th:
 
 Then:
 
-* Start *Intro to R Lab* (due February 1st)
+* Start *Intro to R Lab* (due September 6th)
 
 ---
 class: inverse, right, middle, hide-logo
