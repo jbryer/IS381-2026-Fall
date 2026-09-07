@@ -9,12 +9,12 @@ instructor_email <- 'jason.bryer@cuny.edu'
 description <- paste0(course, ' Statistics and Probability with R ', semester, ' ', year)
 github_user <- 'jbryer'
 github_repo <- "IS381-2026-Fall"
-one_minute_paper <- 'https://forms.gle/X5o6KoJ2CA9bugQ6A'
-one_minute_paper_results <- 'https://docs.google.com/spreadsheets/d/1v7TpiRXCjVs7Lj6pXkP5otwD4elebVvzNH7aRfrIX0I/edit?resourcekey=&gid=1850134229#gid=1850134229'
+one_minute_paper_results <- 'https://docs.google.com/spreadsheets/d/1b4quQwk8sRzHaQN0nH2n6zFwMxCdZE_eUx_zy7kGtQg/edit?resourcekey=&gid=1311230636#gid=1311230636'
 formative_assessment <- 'https://forms.gle/pkDo3Yy3Frzg8Wid9'
 formative_assessmnet_results <- 'https://docs.google.com/spreadsheets/d/1dnH6mCNx7ep8k4y5gHdveWwNXrUd7Qc3EScSBRZhyFI/edit?resourcekey=&gid=168433053#gid=168433053'
 slack_invite_link <- 'https://cuny-msds.slack.com/archives/C0A8WU2C0UW'
 slack_link <- 'https://cuny-msds.slack.com'
+# course_link <- paste0('https://', github_user, '.github.io/', github_repo)
 course_link <- paste0('https://', tolower(semester), year, '.IS381.net')
 
 cuny_colors <- c('#0033A1', '#FFB71B', '#9A3CB0', '#A3C9FF', '#EA0045', '#45C2B1')
@@ -49,6 +49,24 @@ knitr::opts_chunk$set(warning = FALSE, message = FALSE, error = FALSE,
 options(htmltools.dir.version = FALSE, htmltools.preserve.raw = FALSE)
 
 ##### Utility Functions ############################################################################
+get_omp_link <- function(semester, topic, course) {
+	omp_base_link <- 'https://docs.google.com/forms/d/e/1FAIpQLSdkRhGhJpsgc_0LxAmJpemlf7bni8Qs0ZUmovOVvHaOwOQyhA/viewform?usp=pp_url'
+	course_param <- 'entry.1379071784'
+	semester_param <- 'entry.603740146'
+	topic_param <- 'entry.1577539103'
+	
+	link <- omp_base_link
+	if(!missing(semester)) {
+		link <- paste0(link, '&', semester_param, '=', utils::URLencode(semester))
+	}
+	if(!missing(topic)) {
+		link <- paste0(link, '&', topic_param, '=', utils::URLencode(topic))
+	}
+	if(!missing(course)) {
+		link <- paste0(link, '&', course_param, '=', utils::URLencode(course))
+	}
+	return(link)
+}
 
 # This style was adapted from Max Kuhn: https://github.com/rstudio-conf-2020/applied-ml
 # And Rstudio::conf 2020: https://github.com/rstudio-conf-2020/slide-templates/tree/master/xaringan
