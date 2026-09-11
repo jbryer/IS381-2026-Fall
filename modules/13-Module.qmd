@@ -1,13 +1,15 @@
 ---
-title: "Analysis of Variance"
+title: "Correlation"
 ---
 
 ## Readings
 
-[Intro to Modern Statistics chapter 22](https://openintro-ims.netlify.app/inference-many-means)
+[Intro to Modern Statistics chapter 7.1](https://openintro-ims.netlify.app/model-slr)
 
 ## Assignments
 
-[ANOVA Lab](/assignments/13_ANOVA.zip)
+[Correlation Lab](/assignments/13_Correlation.zip)
 
 ## Additional Resources
+
+[Spurious Correlations](https://www.tylervigen.com/spurious-correlations) - this is a fun site that looks at seemingly unrelated variables that have high correlations. Great way to show that correlation does not imply causation.

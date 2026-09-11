@@ -1,34 +1,25 @@
 ---
-title: "Probability"
+title: "Distributions"
 ---
-
 
 ## Readings
 
-OpenIntro Statistics chapter 3
+OpenIntro Statistics chapter 4
 
 ## Assignments
 
-[Probability Lab](/assignments/06_Probability.zip)
+[Distributions Lab](/assignments/06_Distributions.zip)
 
 ## Additional Resources
 
-* [OpenIntro Statistics slides](https://github.com/jbryer/DATA606Fall2020/blob/master/Slides/OpenIntro/chp3.pdf)
-
-* Matloff, N. (2009). [*From Algorithms to Z-Scores: Probabilistic and Statistical Modeling in Computer Science*](https://github.com/jbryer/DATA606Fall2020/blob/master/Textbook/ProbStatBook.pdf?raw=true). Available from [http://heather.cs.ucdavis.edu/probstatbook](http://heather.cs.ucdavis.edu/probstatbook).
-
+* [OpenIntro Statistics slides](https://github.com/jbryer/DATA606Fall2020/blob/master/Slides/OpenIntro/chp4.pdf)
 
 ### Videos
 
-[Probability Introduction](https://www.youtube.com/watch?list=PLkIselvEzpM5EgoOajhw83Ax_FktnlD6n&v=rG-SLQ2uF8U)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/S_p5D-YXLS4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/rG-SLQ2uF8U" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/smJBsZ4YQZw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-[Would You Take This Bet?](https://www.youtube.com/watch?v=vBX-KulgJ1o)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tKmyzhvgudw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/vBX-KulgJ1o" frameborder="0" allowfullscreen></iframe>
-
-[The Monty Hall Problem](https://www.youtube.com/watch?v=mhlc7peGlGg)
-
-<iframe width="420" height="315" src="https://www.youtube.com/embed/mhlc7peGlGg" frameborder="0" allowfullscreen></iframe>
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VvksxAZAlrQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

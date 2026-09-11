@@ -1,13 +1,5 @@
 ---
-title: "Correlation"
+title: "Wrap up / Final Presentations"
 ---
 
-## Readings
-
-[Intro to Modern Statistics chapter 7.1](https://openintro-ims.netlify.app/model-slr)
-
-## Assignments
-
-[Correlation Lab](/assignments/14_Correlation.zip)
-
-## Additional Resources
+Congratulations! You made it through IS381. This week you present your [final project](/project.html).

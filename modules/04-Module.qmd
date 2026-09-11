@@ -1,22 +1,18 @@
 ---
-title: "Data visualization with ggplot2"
+title: "Reshaping Data"
 ---
-
 
 ## Readings
 
-R for Data Science chapters [1](https://r4ds.hadley.nz/data-visualize.html), [9](https://r4ds.hadley.nz/layers.html), and [10](https://r4ds.hadley.nz/EDA.html).
-
+R for Data Science [chapter 3](https://r4ds.hadley.nz/data-transform.html) and the [transform section](https://r4ds.hadley.nz/transform.html).
 
 ## Assignments
 
-[Data visualizaiton lab](/assignments/04_Data_Visualization.zip)
+[Reshaping Data Lab](/assignments/04_Reshaping_Data.zip)
 
 ## Additional Resources
 
-* [ggplot2 documentation website](https://ggplot2.tidyverse.org)
+* [dplyr cheatsheet](https://nyu-cdsc.github.io/learningr/assets/data-transformation.pdf)
 
-* [ggplot2 cheatsheet](https://posit.co/wp-content/uploads/2022/10/data-visualization-1.pdf)
-
-* [ggplot2 book](https://ggplot2-book.org)
+* [dplyr website](https://dplyr.tidyverse.org)
 

@@ -1,24 +1,13 @@
 ---
-title: "Inference for Proportions"
+title: "Inference for Two-Way Tables"
 ---
-
 
 ## Readings
 
-OpenIntro Statistics chapter 6
+[Intro to Modern Statistics](https://openintro-ims.netlify.app/inference-tables)
 
 ## Assignments
 
-[Inference for Proportions Lab](/assignments/10_Inference_for_Categorical_Data.zip)
+[Chi-Squared Lab](/assignments/10_Chi_Squared.zip)
 
 ## Additional Resources
-
-* [OpenIntro Statistics slides](https://github.com/jbryer/DATA606Fall2020/blob/master/Slides/OpenIntro/chp6.pdf)
-
-### Videos
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_iFAZgpWsx0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Uk36WGxujkc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/yjrsfNdja0U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
