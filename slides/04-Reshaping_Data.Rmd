@@ -2,7 +2,7 @@
 title: "Reshaping Data"
 subtitle: "IS381 - Statistics and Probability with R"
 author: Jason Bryer, Ph.D.
-date: "February 23, 2026"
+date: "September 21, 2026"
 output:
   xaringan::moon_reader:
     css: ["assets/mtheme_max.css", "assets/fonts_mtheme_max.css"]
@@ -36,33 +36,6 @@ class: center, middle, inverse, title-slide
 ## `r metadata$subtitle`
 ### `r metadata$author`
 ### `r metadata$date`
-
-
----
-# One Minute Paper Results
-
-```{r, echo=FALSE, eval = TRUE}
-library(googlesheets4)
-library(tidyverse)
-omp <- read_sheet(one_minute_paper_results)
-# names(omp)[8] <- 'Time_Spent'
-# omp$Time_Spent <- NULL
-# omp$Time_Spent <- sapply(omp$Time_Spent, FUN = function(x) { x[[1]] })
- omp <- omp %>% dplyr::filter(Topic == 'Intro to Data (Chapter 1)')
-```
-
-.pull-left[
-**What was the most important thing you learned during this class?**
-```{r, echo=FALSE, cache = TRUE, fig.height=9, eval = TRUE}
- ompWordCloud(omp$`What was the most important thing you learned during this class?`)
-```
-]
-.pull-right[
-**What important question remains unanswered for you?**
-```{r, echo=FALSE, cache = TRUE, fig.height=9, eval = TRUE}
- ompWordCloud(omp$`What important question remains unanswered for you?`)
-```
-]
 
 
 ---
@@ -436,9 +409,9 @@ class: hide-logo
 .font60[
 
 ```{r eval=require('DT'), echo=FALSE, tidy=FALSE}
-legosets %>%
-	sample_n(100) %>% 
-	select(setID, name, year, theme, themeGroup, category, US_retailPrice, pieces, minifigs, rating) %>%
+legosets |>
+	sample_n(100) |> 
+	select(setID, name, year, theme, themeGroup, category, US_retailPrice, pieces, minifigs, rating) |>
 	DT::datatable(fillContainer = FALSE, options = list(pageLength = 10))
 ```
 
@@ -489,7 +462,7 @@ prop.table(table(legosets$category))
 Using the pipe (`|>`) operator we can chain these calls in a what is arguably a more readable format:
 
 ```{r, eval=FALSE}
-table(legosets$category) |> prop.table()
+legosets$category |> table() |> prop.table()
 ```
 ]
 
@@ -516,13 +489,40 @@ table(legosets$category) |> prop.table()
 * `a >= b` - TRUE if a is larger or equal to b
 * `a < b` - TRUE if a is smaller than be, but not equal
 * `a <= b` - TRUE if a is smaller or equal to b
-* `a %in% b` - TRUE if a is in b where b is a vector  
-```{r}
-which( letters %in% c('a','e','i','o','u') )
-```
 * `a | b` - TRUE if a *or* b are TRUE
 * `a & b` - TRUE if a *and* b are TRUE
 * `isTRUE(a)` - TRUE if a is TRUE
+
+---
+class: font80
+# Value Matching (`a %in% b` and `a %notin% b`)
+
+```{r, include=FALSE, results='hide'}
+options(width = 120)
+```
+
+What if we want to know the position of the vowels within the alphabet. To start, we can use the built-in `letters` vector and create a vector for the vowels:
+
+```{r}
+letters
+vowels <- c('a', 'e', 'i', 'o', 'u')
+```
+
+--
+
+The `%in%` operator will look for each element on the left-hand-side within the right-hand-side. The result is a logical vector equal to the length of the left-had-side vector.
+
+```{r}
+letters %in% vowels
+```
+
+--
+
+We can use the `which()` function to find the positions within the logical vector that are `TRUE`.
+
+```{r}
+letters %in% vowels |> which()
+```
 
 ---
 # Filter `r hexes(c('dplyr','tidyverse'))`
@@ -530,7 +530,7 @@ which( letters %in% c('a','e','i','o','u') )
 ### `dplyr`
 
 ```{r}
-mylego <- legosets %>% filter(themeGroup == 'Educational' & year > 2015)
+mylego <- legosets |> filter(themeGroup == 'Educational' & year > 2015)
 ```
 
 ### Base R
@@ -551,7 +551,7 @@ nrow(mylego)
 ### `dplyr`
 
 ```{r}
-mylego <- mylego %>% select(setID, pieces, theme, availability, US_retailPrice, minifigs)
+mylego <- mylego |> select(setID, pieces, theme, availability, US_retailPrice, minifigs)
 ```
 
 ### Base R
@@ -579,7 +579,7 @@ head(mylego, n = 4)
 ### `dplyr`
 
 ```{r}
-mylego %>% relocate(where(is.numeric), .after = where(is.character)) %>% head(n = 3)
+mylego |> relocate(where(is.numeric), .after = where(is.character)) |> head(n = 3)
 ```
 
 ### Base R
@@ -603,7 +603,7 @@ head(mylego2, n = 3)
 ### `dplyr`
 
 ```{r}
-mylego %>% dplyr::rename(USD = US_retailPrice) %>% head(n = 3)
+mylego |> dplyr::rename(USD = US_retailPrice) |> head(n = 3)
 ```
 
 ### Base R
@@ -626,8 +626,8 @@ head(mylego2, n = 3)
 ### `dplyr`
 
 ```{r}
-mylego %>% filter(!is.na(pieces) & !is.na(US_retailPrice)) %>% 
-	mutate(Price_per_piece = US_retailPrice / pieces) %>% head(n = 3)
+mylego |> filter(!is.na(pieces) & !is.na(US_retailPrice)) |> 
+	mutate(Price_per_piece = US_retailPrice / pieces) |> head(n = 3)
 ```
 
 ### Base R
@@ -644,7 +644,7 @@ head(mylego2, n = 3)
 
 .code80[
 ```{r}
-legosets %>% group_by(themeGroup) %>% summarize(mean_price = mean(US_retailPrice, na.rm = TRUE),
+legosets |> group_by(themeGroup) |> summarize(mean_price = mean(US_retailPrice, na.rm = TRUE),
 												sd_price = sd(US_retailPrice, na.rm = TRUE),
 												median_price = median(US_retailPrice, na.rm = TRUE),
 												n = n(),
@@ -693,8 +693,13 @@ class: left, font140
 ]
 .pull-right[
 ```{r, echo=FALSE, fig.width=5, fig.height=5}
-qrcode::qr_code(one_minute_paper) |> plot(col = c('#FAFAFA', 'black'))
+omp_link <- get_omp_link(
+	course = course,
+	semester = paste0(semester, year),
+	topic = 'Reshaping Data'
+)
+qrcode::qr_code(omp_link) |> plot(col = c('#FAFAFA', 'black'))
 ```
+.center[.font50[[Scan the QR code or click here to  
+complete the One Minute Paper](`r omp_link`)]]
 ]
-
-`r one_minute_paper`
