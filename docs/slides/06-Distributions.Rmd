@@ -2,7 +2,7 @@
 title: "Distributions"
 subtitle: "IS381 - Statistics and Probability with R"
 author: Jason Bryer, Ph.D.
-date: "March 9, 2026"
+date: "Week 6"
 output:
   xaringan::moon_reader:
     css: ["assets/mtheme_max.css", "assets/fonts_mtheme_max.css"]
@@ -37,28 +37,7 @@ class: center, middle, inverse, title-slide
 ### `r metadata$author`
 ### `r metadata$date`
 
----
-# One Minute Paper Results
 
-```{r, echo=FALSE}
-library(googlesheets4)
-omp <- read_sheet(one_minute_paper_results)
-omp <- omp %>% dplyr::filter(Topic == 'Probability (Chapter 3)')
-# source('word_cloud.R')
-```
-
-.pull-left[
-**What was the most important thing you learned during this class?**
-```{r, echo=FALSE, fig.height=9}
-ompWordCloud(omp$`What was the most important thing you learned during this class?`)
-```
-]
-.pull-right[
-**What important question remains unanswered for you?**
-```{r, echo=FALSE, fig.height=9}
-ompWordCloud(omp$`What important question remains unanswered for you?`)
-```
-]
 
 ---
 # Coin Tosses Revisited 
@@ -524,18 +503,26 @@ dbinom(1, 4, p)
 
 https://shiny.rit.albany.edu/stat/binomial/
 
+
+
 ---
-class: left, font140
+class: left, font120
 # One Minute Paper
 
 .pull-left[
 1. What was the most important thing you learned during this class?
+
 2. What important question remains unanswered for you?
 ]
 .pull-right[
 ```{r, echo=FALSE, fig.width=5, fig.height=5}
-qrcode::qr_code(one_minute_paper) |> plot(col = c('#FAFAFA', 'black'))
+omp_link <- get_omp_link(
+	course = course,
+	semester = paste0(semester, year),
+	topic = 'Distributions'
+)
+qrcode::qr_code(omp_link) |> plot(col = c('#FAFAFA', 'black'))
 ```
+.center[.font50[[Scan the QR code or click here to  
+complete the One Minute Paper](`r omp_link`)]]
 ]
-
-`r one_minute_paper`
