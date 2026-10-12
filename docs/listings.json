@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/07-Foundation_for_inference.html",
       "/posts/06-Distributions.html",
       "/posts/05-Probability.html",
       "/posts/04-Reshaping_Data.html",

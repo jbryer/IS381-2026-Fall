@@ -1,0 +1,16 @@
+---
+title: "Foundation for inference"
+date: 2026-10-12
+draft: false
+description: "Slides and recording for the *Foundation for inference* meetup."
+categories: ["Meetups"]
+image: "07-Foundation_for_inference.png"
+---
+
+
+[Click here](/slides/07-Foundation_for_Inference.html#1) to open the slides([PDF](/slides/07-Foundation_for_Inference.pdf)).
+
+
+
+
+
