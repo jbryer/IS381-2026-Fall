@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/09-Inference_for_proportions.html",
       "/posts/08-Null_Hypothesis_Testing.html",
       "/posts/07-Foundation_for_inference.html",
       "/posts/06-Distributions.html",
