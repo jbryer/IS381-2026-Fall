@@ -1,6 +1,6 @@
 ---
 title: "Inference for proportions"
-date: 2026-10-22
+date: 2026-10-26
 draft: false
 description: "Slides and recording for the *Inference for proportions* meetup."
 categories: ["Meetups"]
